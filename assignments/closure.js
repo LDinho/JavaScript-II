@@ -1,13 +1,25 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation. Keep it simple!
+
+// function addTwo(n) {
+//   let number = n;
+//   return function() {
+//     return number + 2;
+//   };
+// };
+
+// const four = addTwo(4);
+// console.log(four());
+
+// IIFE
 function addTwo(n) {
   let number = n;
-  return function() {
+  return (function() {
     return number + 2;
-  };
+  }());
 };
-const four = addTwo(4);
-console.log(four());
+
+console.log(addTwo(4));
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
